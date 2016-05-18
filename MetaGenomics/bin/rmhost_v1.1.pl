@@ -190,7 +190,7 @@ sub get_paired_fq{
 		$name2 =~ s/(\S+)\/[12]$//;
 		my $pfx2 = $1;
 		#die "reads file error\n" if $name1 ne $name2;
-		if $name1 ne $name2 {
+		if ($name1 ne $name2) {
 			die "reads file error\n" if $pfx1 ne $pfx2;
 			$name1 = $pfx1;
 			$name2 = $pfx2;
